@@ -1,6 +1,6 @@
 {
   "name": "braze-demo-core",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared core for Braze demo tools: field types and Braze rules, locale packs and identities, seeded RNG, endpoint allow-list and API proxy, plus React UI pieces.",
   "license": "UNLICENSED",
   "type": "module",

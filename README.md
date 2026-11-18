@@ -19,13 +19,15 @@ It holds everything about **what Braze accepts** and **what a localized identity
 | | `identity` | `localizeIdentity()`, plus the pieces it uses: `pickName`, `pickCity`, `renderEmail`, `mobileNumber` |
 | | `braze/endpoints` | Braze REST instances, `resolveEndpoint`, `isAllowedEndpoint` |
 | | `braze/values` | `{"$time"}` helpers for dates inside objects |
+| | `braze/ops` | `planAttributeUpdate(before, after, { identifier })`: smallest correct update for an edited profile (merge, array add/remove, `$add`/`$update`/`$remove`, or replace), plus `valueProblems` and `applyAttributeObjects` |
+| | `braze/client` | `callBraze(connection, path, payload)`: browser call through the proxy with a per-session key |
 | | `braze/proxy` | `createBrazeProxy({ allowedPaths })`: route handler that forwards to Braze with a per-request API key |
-| `braze-demo-core/react` | `ui`, `JsonTree` | UI kit (Button, Input, Card, Modal, Tabs…) and an expandable JSON tree. React 19 is a peer dependency |
+| `braze-demo-core/react` | `ui`, `JsonTree`, `ConnectionForm` | UI kit (Button, Input, Card, Modal, Tabs…), an expandable JSON tree, and the Braze connection form. React 19 is a peer dependency |
 
 ## Install
 
 ```bash
-npm install github:auzaniridzwan-oss/braze-demo-core#v0.1.0
+npm install github:auzaniridzwan-oss/braze-demo-core#v0.2.0
 ```
 
 npm clones the tag and runs `prepare`, which builds `dist/`.

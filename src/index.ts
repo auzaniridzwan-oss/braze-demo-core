@@ -8,3 +8,5 @@ export * from "./identity";
 export * from "./braze/endpoints";
 export * from "./braze/values";
 export * from "./braze/proxy";
+export * from "./braze/ops";
+export * from "./braze/client";
