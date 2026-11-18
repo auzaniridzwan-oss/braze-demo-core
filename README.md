@@ -27,7 +27,7 @@ It holds everything about **what Braze accepts** and **what a localized identity
 ## Install
 
 ```bash
-npm install github:auzaniridzwan-oss/braze-demo-core#v0.2.0
+npm install github:auzaniridzwan-oss/braze-demo-core#v0.3.0
 ```
 
 npm clones the tag and runs `prepare`, which builds `dist/`.
@@ -40,6 +40,16 @@ The React components use Tailwind classes. Tell Tailwind 4 to scan the package, 
 @import "tailwindcss";
 @source "../node_modules/braze-demo-core/dist";
 ```
+
+### Dark mode
+
+The React components include `dark:` styles. Declare the variant in your CSS so they only apply when you want them:
+
+```css
+@custom-variant dark (&:where(.dark, .dark *));
+```
+
+Then toggle the `dark` class on `<html>`. Apps that stay light just add the line and never set the class.
 
 ### Next.js API proxy
 

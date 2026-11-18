@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 — 2026-11-18
+
+- React UI kit and `JsonTree` support dark mode through `dark:` classes. **Apps must declare how dark mode is switched** in their CSS, otherwise Tailwind 4 follows the OS setting:
+  - class-based (Profile Editor): `@custom-variant dark (&:where(.dark, .dark *));` and toggle `.dark` on `<html>`
+  - light only (Generator): the same line, and never set `.dark`
+
 ## 0.2.0 — 2026-11-18
 
 - `braze/ops`: `planAttributeUpdate(before, after)` turns a profile edit into the smallest correct `/users/track` attribute objects: `_merge_objects` for nested edits, `add`/`remove` for arrays, `$add`/`$update`/`$remove` for arrays of objects with a stable id key, full replace otherwise (with the reason). Also `valueProblems`, `detectIdentifierKey`, `deepEqual`, and `applyAttributeObjects` (applies a plan locally, for mocks and tests).
